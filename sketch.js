@@ -9,17 +9,21 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   background(0)
   smooth()
+  radius = 150
+  r = random(255)
+  g = random(255)
+  b = random(255)
 }
 
 function drawEllipse() {
   noFill()
-  stroke(255, 255, 255, 28)
+  stroke(r, g, b, 28)
   ellipse(0, 0, 120, 80)
 }
 
 function mouseMoved() {
     if (mouseX < (windowWidth/3)){
-        //r = random(255);
+        // r = random(255);
         r = map(mouseY, 0, windowHeight, 0, 255)
     } else if (mouseX > ((windowWidth/3)-windowWidth)){
         //b = random(255)
