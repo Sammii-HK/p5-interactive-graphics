@@ -23,13 +23,10 @@ function drawEllipse() {
 
 function mouseMoved() {
     if (mouseX < (windowWidth/3)){
-        // r = random(255);
         r = map(mouseY, 0, windowHeight, 0, 255)
     } else if (mouseX > ((windowWidth/3)-windowWidth)){
-        //b = random(255)
         b = map(mouseY, 0, windowHeight, 0, 255)
     } else {
-        //g = random(255)
         g = map(mouseY, 0, windowHeight, 0, 255)
     }
     radius = map(mouseY, 0, windowHeight, 100, 350)
@@ -37,13 +34,16 @@ function mouseMoved() {
 
 
 function draw() {
+  // background(0)
+  fill(0, 25)
+  rect(0, 0, windowWidth, windowHeight)
+  
   scaleX = map(mouseX, 0, windowWidth, 1.5, 11.5)
   scaleY = map(mouseY, 0, windowHeight, 1.5, 11.5)
   min = map(mouseX, 0, windowWidth, 0.1, 0.5)
   max = map(mouseY, 0, windowHeight, 0.8, 1.8)
   // console.log("scaleX/Y:", scaleX, scaleY)
 
-  background(0)
   translate(windowWidth/2, windowHeight/2)
 
   for (let i = 0; i < 360; i += 0.5) {
